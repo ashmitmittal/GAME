@@ -49,6 +49,7 @@ function setupSquare() {
         scores++;
         localStorage.setItem("score", scores);
         scorebox.innerHTML = `Score : ${localStorage.getItem("score")}`;
+        location.reload(true);
       } else {
         this.style.backgroundColor = "#232323";
         messageDisplay.textContent = "Try Again";
@@ -56,6 +57,7 @@ function setupSquare() {
           scores--;
           localStorage.setItem("score", scores);
           scorebox.innerHTML = `Score : ${localStorage.getItem("score")}`;
+          location.reload(true);
         }
       }
     });
