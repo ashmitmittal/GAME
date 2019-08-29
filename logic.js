@@ -53,7 +53,9 @@ function setupSquare() {
         localStorage.setItem("score", scores);
         scorebox.innerHTML = `Score : ${localStorage.getItem("score")}`;
         reset();
-
+        changeColors(clickedColor);
+        h1.style.backgroundColor = clickedColor;
+        
       } else {
         this.style.backgroundColor = "#232323";
         messageDisplay.textContent = "Try Again";
@@ -88,6 +90,7 @@ function reset() {
     }
   }
   h1.style.backgroundColor = "steelblue";
+  scorebox.style.backgroundColor = "steelblue";
 }
 
 // easyBtn.addEventListener("click",function(){
@@ -153,6 +156,7 @@ function changeColors(color) {
     //change each color to match given color
     squares[i].style.backgroundColor = color;
   }
+    scorebox.style.backgroundColor = color;
 }
 
 function pickcolor() {
