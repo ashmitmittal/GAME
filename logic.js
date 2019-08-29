@@ -18,6 +18,9 @@ function init() {
   reset();
   if (localStorage.getItem("score")) {
     scorebox.innerHTML = `Score : ${localStorage.getItem("score")}`;
+  }   
+  else {
+    scorebox.innerHTML = "welcome here";
   }
 }
 
